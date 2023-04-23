@@ -23,8 +23,8 @@ pipeline {
             post {
                 always {
                     mail to: "${EMAIL_PATH}",
-                    subject: "Test Email ${BUILD_STATUS}",
-                    body: "Test Successful ${BUILD_LOG}"
+                    subject: "Test Email",
+                    body: "Test Successful${BUILD_LOG}"
                 }
             }
             // post {
