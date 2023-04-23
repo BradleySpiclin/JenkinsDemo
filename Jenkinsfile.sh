@@ -19,7 +19,7 @@ pipeline {
                 echo "Testing stage"
                 echo "Unit tests"
                 echo "Integration tests 111"        
-                emailext(attachLog: true, to: 'bradleyspiclin@gmail.com', subject: 'hello')      
+                emailext(attachLog: true, to: 'bradleyspiclin@gmail.com', subject: 'hello', body: "hello")      
             }
             // post {
             //     success {
