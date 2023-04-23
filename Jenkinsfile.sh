@@ -22,11 +22,11 @@ pipeline {
             }
             post {
                 success {
-                    emailext attachmentsPattern: '**/build.log',
-                    attachLog: true,
+                    mail to: "${EMAIL_PATH}",
+                    emailext attachLog: true,
                     body: "Email sent from Jenkins",
                     subject: "Unit and Integration Tests - Success",  
-                    to: "${EMAIL_PATH}"
+
                 }
             }
         }
