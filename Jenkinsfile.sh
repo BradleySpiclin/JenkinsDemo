@@ -41,16 +41,14 @@ pipeline {
         stage("Deploy to Staging") {
             steps {
                 echo "Pausing for approval - 10 seconds"
-                sleep 10
-                echo "Approved"
             }
         }
         stage("Integration Tests on Staging") {
             steps {
-                echo "Deploy code to production environment: ${PRODUCTION_ENVIRONMENT}"
+                echo "Integration tests on staging"
             }
         }
-                stage("Integration Tests on Staging") {
+        stage("Deploy to Production") {
             steps {
                 echo "Deploy code to production environment: ${PRODUCTION_ENVIRONMENT}"
             }
