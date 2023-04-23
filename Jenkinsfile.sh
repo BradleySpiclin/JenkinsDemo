@@ -25,8 +25,7 @@ pipeline {
                     mail to: "${EMAIL_PATH}",
                     attachLog: true,
                     body: "Email sent from Jenkins",
-                    subject: "Unit and Integration Tests - Success",  
-
+                    subject: "Unit and Integration Tests - Success" 
                 }
             }
         }
