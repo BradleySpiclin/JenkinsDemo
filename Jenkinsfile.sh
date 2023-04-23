@@ -22,7 +22,7 @@ pipeline {
             }
             post{
                 always{
-                    emailext to: "${EMAIL_PATH}",
+                    mail to: "${EMAIL_PATH}",
                     subject: "Test Email",
                     body: "Test",
                     attachLog: true
