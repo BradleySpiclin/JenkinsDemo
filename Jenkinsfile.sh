@@ -19,14 +19,9 @@ pipeline {
                 echo "Testing stage"
                 echo "Unit tests"
                 echo "Integration tests"
+                emailext attachLog: true, body: 'This is test', subject: 'This is test', to: 'bradleyspiclin@gmail.com'
             }
-            post {
-                always {
-                    mail to: "${EMAIL_PATH}",
-                    subject: "Test Email",
-                    body: "Test Successful${BUILD_LOG}"
-                }
-            }
+            
             // post {
             //     success {
             //         mail to: "${EMAIL_PATH}",
