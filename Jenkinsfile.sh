@@ -20,13 +20,21 @@ pipeline {
                 echo "Unit tests"
                 echo "Integration tests"
             }
-            post {
-                success {
-                    mail to: "${EMAIL_PATH}",
-                    subject: "Unit and Integration Tests - Success",
-                    body: "Email sent from Jenkins"
+            post{
+                always{
+                    emailext to: "${EMAIL_PATH}",
+                    subject: "Test Email",
+                    body: "Test",
+                    attachLog: true
                 }
             }
+            // post {
+            //     success {
+            //         mail to: "${EMAIL_PATH}",
+            //         subject: "Unit and Integration Tests - Success",
+            //         body: "Email sent from Jenkins"
+            //     }
+            // }
         }
         stage("Code Analysis") {
             steps {
