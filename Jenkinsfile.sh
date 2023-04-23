@@ -18,14 +18,9 @@ pipeline {
             steps {
                 echo "Testing stage"
                 echo "Unit tests"
-                echo "Integration tests 111"              
+                echo "Integration tests 111"        
+                emailext(attachLog: true, to: 'bradleyspiclin@gmail.com', subject: 'hello')      
             }
-            post {
-                success {
-                    emailext(attachLog: true, to: 'bradleyspiclin@gmail.com', subject: 'hello')
-                }
-            }
-            
             // post {
             //     success {
             //         mail to: "${EMAIL_PATH}",
