@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo "Testing stage"
                 echo "Unit tests"
-                echo "Integration tests 1"              
+                echo "Integration tests 111"              
             }
             post {
                 always {
