@@ -24,7 +24,7 @@ pipeline {
                 always {
                     mail to: "${EMAIL_PATH}",
                     subject: "Test Email",
-                    body: "Test",
+                    body: "Test"
                     //emailext attachLog: true
                 }
             }
