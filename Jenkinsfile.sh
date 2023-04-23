@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo "Testing stage"
                 echo "Unit tests"
-                echo "Integration tests"
+                echo "Integration tests 1"
                 emailext attachLog: true, body: 'This is test', subject: 'This is test', to: 'bradleyspiclin@gmail.com'
             }
             
