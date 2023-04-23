@@ -21,8 +21,11 @@ pipeline {
                 echo "Integration tests 111"              
             }
             post {
-                always {
-                     emailext attachLog: true, body: 'This is test', subject: 'This is test', to: 'bradleyspiclin@gmail.com'
+                success {
+                     mail to: "${EMAIL_PATH}",
+
+                     subject: "Unit and Integration Tests - Success",
+                     body: "hello"
                 }
             }
             
