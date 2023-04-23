@@ -22,9 +22,9 @@ pipeline {
             }
             post {
                 always {
-                    mail to: "${EMAIL_PATH}",
+                    mail to: '${EMAIL_PATH}',
                     subject: "Test Email",
-                    body: "Test"
+                    body: 'Test Successful\n${BUILD_LOG, maxLines=999, escapeHtml=true}' 
                     //emailext attachLog: true
                 }
             }
