@@ -23,7 +23,7 @@ pipeline {
             post {
                 success {
                     mail to: "${EMAIL_PATH}",
-                    emailext attachLog: true,
+                    attachLog: true,
                     body: "Email sent from Jenkins",
                     subject: "Unit and Integration Tests - Success",  
 
