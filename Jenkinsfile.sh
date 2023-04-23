@@ -25,7 +25,7 @@ pipeline {
                     emailext attachmentsPattern: '**/build.log',
                     to: "${EMAIL_PATH}",
                     subject: "Test Status Email",
-                    body: "Test Successful\n${BUILD_LOG, maxLines, escapeHtml}"           
+                    body: "Test Successful\n${BUILD_LOG, maxLines=999, escapeHtml=true}"     
                 }
             }
         }
