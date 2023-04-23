@@ -4,8 +4,6 @@ pipeline {
         EMAIL_PATH = "bradleyspiclin@gmail.com"
         EMAIL_BODY = "Build logs attached"
         DIRECTORY_PATH = "https://github.com/BradleySpiclin/complete-ecommerce-aspnet-mvc-application.git"
-        TESTING_ENVIRONMENT = "Live testing environment"
-        PRODUCTION_ENVIRONMENT = "Bradley Spiclin's development environment"
     }
     stages {
         stage("Build") {
