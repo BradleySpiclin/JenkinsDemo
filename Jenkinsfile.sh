@@ -22,7 +22,7 @@ pipeline {
             }
             post {
                 success {
-                    emailext(attachLog: true, to: '${EMAIL_PATH}', subject: 'hello', body: "hello")      
+                    emailext(attachLog: true, to: "${EMAIL_PATH}", subject: 'hello', body: "hello")      
                 }
                 failed {
                     emailext(attachLog: true, to: 'bradleyspiclin@gmail.com', subject: '', body: "hello")      
