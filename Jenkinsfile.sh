@@ -24,7 +24,7 @@ pipeline {
                 always {
                     mail to: "${EMAIL_PATH}",
                     subject: "Test Email",
-                    body: "Test Successful"
+                    body: "Test Successful ${BUILD_LOG}"
                 }
             }
             // post {
