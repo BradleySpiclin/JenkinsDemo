@@ -19,15 +19,12 @@ pipeline {
                 echo "Testing stage"
                 echo "Unit tests"
                 echo "Integration tests 111"        
-                emailext(attachLog: true, to: 'bradleyspiclin@gmail.com', subject: 'hello', body: "hello")      
             }
-            // post {
-            //     success {
-            //         mail to: "${EMAIL_PATH}",
-            //         subject: "Unit and Integration Tests - Success",
-            //         body: "Email sent from Jenkins"
-            //     }
-            // }
+            post {
+                success {
+                    emailext(attachLog: true, to: 'bradleyspiclin@gmail.com', subject: 'hello', body: "hello")      
+                }
+            }
         }
         stage("Code Analysis") {
             steps {
