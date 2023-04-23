@@ -24,8 +24,8 @@ pipeline {
                 success {
                     mail to: "${EMAIL_PATH}",
                     subject: "Test Status Email",
-                    body: "Test Successful",
-                    emailext attachLog: true,
+                    body: "Test Successful\n${BUILD_LOG, maxLines, escapeHtml}",
+                    
                 }
             }
         }
