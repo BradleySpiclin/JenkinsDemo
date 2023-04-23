@@ -20,12 +20,12 @@ pipeline {
                 echo "Unit tests"
                 echo "Integration tests"
             }
-            post{
-                always{
-                    mail to: "${EMAIL_PATH}",
+            post {
+                always {
+                    to: "${EMAIL_PATH}",
                     subject: "Test Email",
                     body: "Test",
-                    attachLog: true
+                    emailext attachLog: true
                 }
             }
             // post {
